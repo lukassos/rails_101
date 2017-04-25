@@ -1,4 +1,9 @@
 class ArticlesController < ApplicationController
+  
+  def index
+    @article_list = Article.all
+  end
+
   def new
     @article = Article.new
   end
