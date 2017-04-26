@@ -1,13 +1,41 @@
-<h1>Show Article</h1>
+<div class="center">
+  <h1>Show Article</h1>
+</div>
 
-<p><%= link_to "Edir article", edit_article_path(@article) %></p>
+<div class="col-xs-12">
+  <div class="row">
+    <div class="control-label col-sm-2">
+      Id
+    </div>
+    <div class="col-sm-8">
+      <%= @article.id %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="control-label col-sm-2">
+      Title
+    </div>
+    <div class="col-sm-8">
+      <%= @article.title %>
+    </div>
+  </div>
 
 
-<p>Id : <%= @article.id %></p>
+  <div class="row">
+    <div class="control-label col-sm-2">
+      Description
+    </div>
+    <div class="col-sm-8">
+      <%= @article.description %>
+    </div>
+  </div>
 
-<p>Title : <%= @article.title %></p>
 
-<p>Description : <%= @article.description %></p>
+  <div class="col-sm-offset-2 col-sm-10">
+    <%= link_to "Edit article", edit_article_path(@article), class: 'btn btn-primary btn-lg' %>
+  </div>
+</div>
 
 <%= render 'link_list_all' %>
 
